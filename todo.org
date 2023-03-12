@@ -1,0 +1,72 @@
+* TODO deployment
+** TODO github pages
+Follow these steps to deploy the site to gh pages
+1. store <project> directory somewhere
+#+begin_src sh
+git clone https://github.com/oblomovite/<project>
+#+end_src
+2. add content
+#+begin_src sh
+cd <project>
+echo "hello world" > index.html
+#+end_src
+3. push changes
+#+begin_src sh
+git commit -a 
+git commit -m 'init'
+git push -u origin main
+#+end_src
+
+** TODO vercel
+Once the mvp is finalized setup a production deployment via vercel
+* TODO discuss layout + design
+discuss layout for articles specifically:
+    1. should articles be organized into categories (eg. book-review)
+       and indexed individually as posts and/or;
+    2. do articles need to be formatted into newletter format into
+       complete packaged releases (ie. as a newspaper)
+* TODO landing
+A user should see a landing page containing:
+    - a navigation bar
+    - matter head
+    - scrollable headline content with:
+      - information about the latest releases
+      - feature pieces
+      - site information  
+    - footer with copy-right, trademark, etc. whatever is relevant 
+* TODO navigation bar
+The navigation bar should be accessible from the top of the screen and
+contain the following links:
+    - inline list of article categories
+    - releases
+    - search
+* TODO search
+A user should be able to search articles by either:
+- given criteria:
+  - content
+  - author
+  - category
+- inferred (regex?)
+* TODO releases 
+once a completed document is released it and previous releases should
+be available for reading/downloading
+** TODO store documents
+consider using S3 buckets or a cms
+** TODO design
+Just a list of rendered pdfs + download links?
+** TODO migrate previous releases
+previous releases should also be available on the reworked site
+* TODO submissions
+- Users need to be able to submit articles and media (either free-form
+or as a file) -- note we need to agree on a format
+- An admin should be able to:
+  - view documents and media
+  - perform review and approval process on articles and media
+** TODO notifications  
+Notifications should be issued to the author of a submission that
+their article is either approved or rejected
+** TODO combine articles into single document
+An admin should be able to perform a release process that takes all
+relevant articles and formats them into a single document
+* TODO theme + logo
+discuss midwest-transfer theme + logo 
