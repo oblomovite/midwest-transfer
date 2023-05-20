@@ -23,3 +23,34 @@ export async function getPosts(): Promise<Post[]> {
     return [];
   }
 }
+
+// lib/wordpress.ts
+export async function getStubPosts(): Promise<Post[]> {
+    // Simulate an API call delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+  
+    // Stubbed posts data
+    const stubbedPosts = [
+      {
+        id: 1,
+        title: 'Stubbed Post 1',
+        content: '<p>This is the content of stubbed post 1.</p>',
+        date: '2022-01-01',
+      },
+      {
+        id: 2,
+        title: 'Stubbed Post 2',
+        content: '<p>This is the content of stubbed post 2.</p>',
+        date: '2022-02-01',
+      },
+      {
+        id: 3,
+        title: 'Stubbed Post 3',
+        content: '<p>This is the content of stubbed post 3.</p>',
+        date: '2022-03-01',
+      },
+    ];
+  
+    return stubbedPosts;
+  }
+  
