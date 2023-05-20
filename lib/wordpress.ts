@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-interface Post {
+export interface Post {
   id: number;
   title: {
     rendered: string;
@@ -13,8 +13,8 @@ interface Post {
 
 export async function getPosts(): Promise<Post[]> {
   try {
-    // todo
     const response: AxiosResponse<Post[]> = await axios.get(
+      // todo: replace with real endpoint
       "https://your-wordpress-site/wp-json/wp/v2/posts"
     );
     return response.data;
