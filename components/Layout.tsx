@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main>{children}</main>
-      {/* Add footer or other common elements here */}
+      <main className="flex-grow">{children}</main>
+      <Footer />
     </div>
   );
 };

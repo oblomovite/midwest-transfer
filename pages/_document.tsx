@@ -1,4 +1,3 @@
-import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
@@ -11,11 +10,22 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Add any custom head tags or meta here */}
-          <link rel="icon" href="/favicon.ico" />
+          {/* SEO metadata */}
+          <title>Your Page Title</title>
+          <meta name="description" content="Your website description here" />
+          <meta name="keywords" content="keyword1, keyword2, keyword3" />
+
+          {/* Responsive meta tags */}
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+          {/* Add any additional meta tags, external stylesheets, or scripts */}
+          <link
+            rel="icon"
+            type="image/png"
+            href="/favicon.png"
+          />
         </Head>
-        <body>
-          {/* Add custom body elements or components here */}
+        <body className="bg-gray-100">
           <Main />
           <NextScript />
         </body>
