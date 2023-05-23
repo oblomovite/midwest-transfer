@@ -13,9 +13,8 @@ module.exports = {
         // Add more custom colors as needed
       },
       fontFamily: {
-        sans: ['Arial', 'sans-serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
-      // Add more theme customizations as needed
     },
   },
   plugins: [],

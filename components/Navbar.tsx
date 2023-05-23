@@ -8,24 +8,24 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <a className="text-white font-bold text-xl">My Blog</a>
+              <p className="text-white font-bold text-xl">Midwest Transfer</p>
             </Link>
           </div>
           <div className="flex items-center">
             <Link href="/">
-              <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+              <p className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                 Home
-              </a>
+              </p>
             </Link>
             <Link href="/about">
-              <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+              <p className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                 About
-              </a>
+              </p>
             </Link>
             <Link href="/contact">
-              <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+              <p className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                 Contact
-              </a>
+              </p>
             </Link>
           </div>
         </div>

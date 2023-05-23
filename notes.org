@@ -1,0 +1,24 @@
+* [slug] files
+The [slug].tsx file is used in Next.js for dynamic routing. 
+It allows you to create pages with dynamic URLs based on a specific parameter,
+ such as a slug. 
+
+The getStaticProps function is used to fetch the post data from the API based on the slug parameter. 
+It receives the params object, which contains the slug parameter.
+ You can perform the necessary logic to fetch the post data by slug from your 
+ WordPress API or any other data source.
+
+The getStaticPaths function is responsible for specifying the dynamic paths to pre-render.
+ It fetches the list of slugs for all posts from the API and creates an array of objects 
+ with the params key containing the slug. These paths will be pre-rendered during build time.
+
+The PostPage component receives the postData as a prop and renders the post's title and content.
+ If the router is in fallback mode (e.g., during build time or while generating the static HTML),
+  it displays a "Loading..." message.
+
+Remember to replace the fetchPostBySlug and fetchAllPosts functions with the actual implementation 
+to fetch post data from your WordPress API or any other data source.
+
+This [slug].tsx file should be placed in the pages directory of your Next.js project.
+ When you access a URL like /blog/my-post-slug, it will dynamically render the content 
+ for that specific post based on the provided slug.
